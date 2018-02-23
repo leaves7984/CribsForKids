@@ -1,0 +1,34 @@
+[
+  {
+    "id": "524",
+    "name": "V-Neck T-Shirt",
+    "description": "Why back to sleep?",
+    "topic": "Tummy",
+    "image": "../assets/imgs/slide3.png",
+    "age": "0-3"
+  },
+  {
+    "id": "530",
+    "name": "Bamboo Thermal Ski Coat",
+    "description": "How do I keep my baby safe and warm?",
+    "topic": "Leg Exercises",
+    "image": "../assets/imgs/slide1.png",
+    "age": "4-6"
+  },
+  {
+    "id": "259",
+    "name": "Raspberry Mineral Water",
+    "description": "How do I keep my baby safe and warm?",
+    "topic": "Strengthening",
+    "image": "../assets/imgs/slide2.png",
+    "age": "6-8"
+  },
+  {
+    "id": "259",
+    "name": "Raspberry Mineral Water",
+    "description": "How do I keep my baby safe and warm?",
+    "topic": "Fine&Gross Motor Skills",
+    "image": "../assets/imgs/slide3.png",
+    "age": "9-12"
+  }
+  ]

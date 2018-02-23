@@ -1,3 +1,36 @@
 page-contact {
 
 }
+.contact-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 90%;
+  min-height: 9rem;
+  max-height: 9rem;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px #222;
+  transition: all 0.3s ease-in;
+}
+
+.contact-tile:active {
+  box-shadow: 2px 2px 2px #666;
+  transform: translateY(4px);
+}
+
+.contact-tile span p {
+  font-size: 150%;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.social-media {
+  font-size: 36px; //Preferred size here
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.store-button {
+  max-width: 75%;
+}

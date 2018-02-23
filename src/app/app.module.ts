@@ -7,12 +7,17 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { HttpClientModule} from "@angular/common/http";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SourceProvider } from '../providers/source/source';
+import { SafeSleepPage} from "../pages/safe-sleep/safe-sleep";
+import { FilterModelPage} from "../pages/filter-model/filter-model";
 
 @NgModule({
   declarations: [
+    FilterModelPage,
+    SafeSleepPage,
     MyApp,
     AboutPage,
     ContactPage,
@@ -20,11 +25,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    FilterModelPage,
+    SafeSleepPage,
     MyApp,
     AboutPage,
     ContactPage,
@@ -32,9 +40,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage
   ],
   providers: [
+    SourceProvider,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+
   ]
 })
 export class AppModule {}

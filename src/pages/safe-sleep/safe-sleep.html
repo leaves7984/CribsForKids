@@ -1,0 +1,40 @@
+<!--
+  Generated template for the SafeSleepPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Infant Safe Sleep</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page">
+  <img src="./assets/imgs/slide1.png" />
+  <div>
+    <p><span>Safe Sleeping</span></p>
+  </div>
+
+  <ion-card *ngFor="let source of allSource">
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img [src]="source.image"/>
+        </ion-thumbnail>
+        <h2>{{source.topic}}</h2>
+        <p>{{source.description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab (click)="openFilterModal()">
+      <ion-icon name="settings">
+
+      </ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
