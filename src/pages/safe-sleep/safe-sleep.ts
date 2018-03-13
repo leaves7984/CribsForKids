@@ -18,10 +18,10 @@ import { FilterModelPage} from "../filter-model/filter-model";
 })
 export class SafeSleepPage {
   allSource: Detail[];
-  private m0Selected = true;
-  private m4Selected = true;
-  private m6Selected = true;
-  private m9Selected = true;
+  //private m0Selected = true;
+  //private m4Selected = true;
+  //private m6Selected = true;
+  //private m9Selected = true;
   constructor(private modalController:ModalController,
               private provider: SourceProvider,
               public navCtrl: NavController,
