@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ModalController } from 'ionic-angular';
-import { Detail} from "../../detail";
-import { SourceProvider} from "../../providers/source/source";
-import { FilterModelPage} from "../filter-model/filter-model";
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { Detail } from "../../detail";
+import { SourceProvider } from "../../providers/source/source";
+import { FilterModelPage } from "../filter-model/filter-model";
 
 /**
  * Generated class for the SafeSleepPage page.

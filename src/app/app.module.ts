@@ -13,6 +13,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { SourceProvider } from '../providers/source/source';
 import { SafeSleepPage } from "../pages/safe-sleep/safe-sleep";
 import { AskPediatricianPage } from "../pages/ask-pediatrician/ask-pediatrician";
+import { SafeSleepTipsPage } from "../pages/safe-sleep-tips/safe-sleep-tips";
+import { ReduceRiskPage } from "../pages/reduce-risk/reduce-risk";
 import { FilterModelPage } from "../pages/filter-model/filter-model";
 
 @NgModule({
@@ -20,6 +22,8 @@ import { FilterModelPage } from "../pages/filter-model/filter-model";
     FilterModelPage,
     SafeSleepPage,
     AskPediatricianPage,
+    SafeSleepTipsPage,
+    ReduceRiskPage,
     MyApp,
     AboutPage,
     ContactPage,
@@ -36,6 +40,8 @@ import { FilterModelPage } from "../pages/filter-model/filter-model";
     FilterModelPage,
     SafeSleepPage,
     AskPediatricianPage,
+    SafeSleepTipsPage,
+    ReduceRiskPage,
     MyApp,
     AboutPage,
     ContactPage,
