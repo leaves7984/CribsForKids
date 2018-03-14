@@ -90,3 +90,10 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url('/assets/fonts/Lato/Lato-Regular.ttf');
+}
+
+$font-family-base: "Lato-Regular";

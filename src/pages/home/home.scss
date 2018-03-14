@@ -1,18 +1,20 @@
-page-home {
-
-}
-.middleText{
-  text-align: center;
-  font-family: 'Arial', sans-serif;
+.middleText {
+  text-align: center; //font-family: 'Arial', sans-serif;
   color: #01337a;
 }
 
-ion-slides{
-  height:200px;
+ion-slides {
+  height: 200px;
 }
-.title{
+
+/*
+.title {
   max-height: 50%;
   max-width: 60%;
   margin: 18px 60px;
 }
+*/
 
+.content-ios hr {
+  height: 1px;
+}

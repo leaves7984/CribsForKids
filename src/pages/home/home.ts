@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Content } from 'ionic-angular';
 import { SourceProvider} from "../../providers/source/source";
 import { Detail} from "../../detail";
-import {AboutPage} from "../about/about";
+import { AboutPage } from "../about/about";
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  @ViewChild(Content) content: Content;
+
   allSource: Detail[];
-  public currentTab: string;
-  public selected: boolean;
+  segment: string = 'food';
   slides = [
     {
       title: "Welcome to the Docs!",
@@ -29,14 +30,20 @@ export class HomePage {
       image: "../../assets/imgs/slide3.png",
     }
   ];
+
   constructor(private provider: SourceProvider,public navCtrl: NavController) {
-    this.selected = true;
   }
+
   goSafeSleep(){
     this.navCtrl.push(AboutPage);
   }
+
   ionViewDidLoad(){
     this.provider.getSource()
       .subscribe(data=>this.allSource = data);
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop();
   }
 }

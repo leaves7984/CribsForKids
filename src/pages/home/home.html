@@ -1,12 +1,13 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
     <ion-title>Safe Sleep</ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
-  <img src="../../assets/imgs/title.png" class = "title"/>
+<ion-content>
+  <br />
+  <img src="../../assets/imgs/title.png" class="title" />
   <hr />
 
   <ion-row>
@@ -15,7 +16,7 @@
     </ion-col>
     <ion-col>
       <button ion-button color="Bpink" (click)="goSafeSleep()">
-        Go Safe Sleep
+        Go Safe Sleep&nbsp;&nbsp;
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-col>
@@ -23,67 +24,72 @@
 
   <ion-slides pager autoplay="3000" loop="true" speed="2000">
     <ion-slide *ngFor="let slide of slides">
-      <img [src]="slide.image" class="slide-image"/>
+      <img [src]="slide.image" class="slide-image" />
     </ion-slide>
   </ion-slides>
-  <div class = "middleText">
-  <p> OUR ACADEMY </p>
-  <hr />
+  <div class="middleText">
+    <p> OUR ACADEMY </p>
+    <hr />
   </div>
 
+  <button ion-button clear (click)="scrollToTop()">
+    <ion-icon name="home"></ion-icon>
+    &nbsp;&nbsp;Home
+  </button>
 
-
-
-  <div class="button icon-left ion-home">Home</div>
   <ion-card>
+
+    <ion-card-header>
+      Daily tips
+    </ion-card-header>
     <ion-card-content>
-      <div>Daily tips</div>
+      <div>
+        <ion-segment [(ngModel)]="segment">
+          <ion-segment-button value="food">
+            Food
+          </ion-segment-button>
+          <ion-segment-button value="technology">
+            Technology
+          </ion-segment-button>
+          <ion-segment-button value="travel">
+            Travel
+          </ion-segment-button>
+        </ion-segment>
+        <br />
+      </div>
+
+      <div [ngSwitch]="segment">
+        <ion-list *ngSwitchCase="'food'">
+          <h4>Ina's Mac and Cheese</h4>
+          <p>
+            Here's what one recipe reviewer had to say: "This mac and cheese is all grown-up. It was tasty, cheesy and easy to make.
+            Have made it a few times in the last 2 months and it is a hit each time."
+          </p>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'technology'">
+          <h4>Google Go</h4>
+          <p>
+            Google Go makes discovering, exploring, and sharing the best of the web easy and fast. Get answers quickly and reliably with
+            Google Go, even on slow connections and smartphones with low space. At 5MB in size, it’s speedy to download and
+            get started.
+          </p>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'travel'">
+          <h4>Take Lots Of Photos</h4>
+          <p>
+            You may only see these places & meet these people once in your lifetime. Remember them forever with plenty of photos. Don’t
+            worry about looking like a “tourist”. Are you traveling to look cool? No one cares. Great photos are the ultimate
+            souvenir.
+          </p>
+        </ion-list>
+      </div>
     </ion-card-content>
-    <div class="container">
-      <ion-row>
-        <ion-col>
-          <button class="button button-clear button-positive" (click)="currentTab='food';selected =false">Food</button>
-        </ion-col>
-        <ion-col>
-          <button class="button button-clear button-positive" (click)="currentTab='tech';selected =false">Technology</button>
-        </ion-col>
-        <ion-col>
-          <button class="button button-clear button-positive"  (click)="currentTab='travel';selected =false">Travel</button>
-        </ion-col>
-      </ion-row>
-    </div>
-    <ion-card-content>
-      <div *ngIf="currentTab == 'food'|| selected == true">
-        <h4>Ina's Mac and Cheese</h4>
-        <p>
-          Here's what one recipe reviewer had to say: "This mac and cheese is all grown-up. It was tasty, cheesy and easy to make. Have made it a few times in the last 2 months and it is a hit each time."
-        </p>
-
-      </div>
-
-      <div *ngIf="currentTab == 'tech'">
-        <h4>Google Go</h4>
-        <p>
-          Google Go makes discovering, exploring, and sharing the best of the web easy and fast. Get answers quickly and reliably with Google Go, even on slow connections and smartphones with low space. At 5MB in size, it’s speedy to download and get started.
-        </p>
-
-      </div>
-
-      <div *ngIf="currentTab == 'travel'">
-        <h4>Take Lots Of Photos</h4>
-        <p>
-          You may only see these places & meet these people once in your lifetime. Remember them forever with plenty of photos. Don’t worry about looking like a “tourist”. Are you traveling to look cool? No one cares. Great photos are the ultimate souvenir.
-
-        </p>
-      </div>
-    </ion-card-content>
-
-    <button class="mbsc-btn-flat">Read more</button>
 
   </ion-card>
-
   <ion-card *ngFor="let source of allSource">
-    <img [src]="source.image"/>
+    <img [src]="source.image" />
     <ion-card-content>
       {{source.description}}
     </ion-card-content>

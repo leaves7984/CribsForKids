@@ -1,9 +1,6 @@
-page-filter-model {
-
-}
 body,html {
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  //font-family: 'Arial', sans-serif;
 }
 ion-title {
   position: absolute;
@@ -13,11 +10,12 @@ ion-title {
   height: 100%;
   text-align: center;
 }
+/*
 .title{
   max-height: 50%;
   max-width: 60%;
   margin: 18px 60px;
-}
+}*/
 .flex-panel {
   display: flex;
   flex-direction: row;
@@ -31,28 +29,38 @@ ion-title {
   justify-content: center;
   color: white;
   width: 40%;
+  padding: 10px;
   min-height: 9rem;
   max-height: 9rem;
   border-radius: 25px;
-  box-shadow: 2px 2px 2px #222;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22) !important;
   transition: all 0.3s ease-in;
 }
 .menu-tile:active {
-  box-shadow: 2px 2px 2px #666;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22) !important;
   transform: translateY(4px);
 }
 .gray-tile {
-  background: #77767b;
+  background: #77767b !important;
+  color: white !important;
 }
 
 .pink-tile {
-  background: #f677c4;
+  background: #f677c4 !important;
+  color: white !important;
 }
 
 .green-tile {
-  background: #00afaa;
+  background: #00afaa !important; 
+  color: white !important;
 }
 
 .blue-tile {
-  background: #01337a
+  background: #01337a !important;
+  color: white !important;
+}
+
+.blank-title {
+  color: black;
+  background: #f8f8f8;
 }

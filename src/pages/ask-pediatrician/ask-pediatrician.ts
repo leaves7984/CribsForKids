@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ContactFormPage} from "../contact-form/contact-form";
+import { ContactFormPage } from "../contact-form/contact-form";
 
 /**
  * Generated class for the AskPediatricianPage page.
