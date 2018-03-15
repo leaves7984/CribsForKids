@@ -17,6 +17,8 @@ import { SafeSleepTipsPage } from "../pages/safe-sleep-tips/safe-sleep-tips";
 import { ReduceRiskPage } from "../pages/reduce-risk/reduce-risk";
 import { FilterModelPage } from "../pages/filter-model/filter-model";
 
+import { ExpandableComponent } from "../components/expandable/expandable"
+
 @NgModule({
   declarations: [
     FilterModelPage,
@@ -28,7 +30,8 @@ import { FilterModelPage } from "../pages/filter-model/filter-model";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ExpandableComponent
   ],
   imports: [
     HttpClientModule,
@@ -54,6 +57,7 @@ import { FilterModelPage } from "../pages/filter-model/filter-model";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
 
-  ]
+  ],
+  exports: [ExpandableComponent]
 })
 export class AppModule {}

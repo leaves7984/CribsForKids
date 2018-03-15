@@ -14,5 +14,12 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <div ion-item *ngFor="let item of items">
+      <expandable [title]="item.title" [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+        {{item.content}}
+      </expandable>
+      <button ion-button class='right-top' (click)="expandItem(item)" clear item-end>View</button>
+    </div>
+  </ion-list>
 </ion-content>
