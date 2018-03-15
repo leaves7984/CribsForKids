@@ -10,17 +10,9 @@
   <img src="../../assets/imgs/title.png" class="title" />
   <hr />
 
-  <ion-row>
-    <ion-col>
-      <p>Good Morning</p>
-    </ion-col>
-    <ion-col>
-      <button ion-button color="Bpink" (click)="goSafeSleep()">
-        Go Safe Sleep&nbsp;&nbsp;
-        <ion-icon name="arrow-forward"></ion-icon>
-      </button>
-    </ion-col>
-  </ion-row>
+  <div class="middleText">
+    <p> Good Morning </p>
+  </div>
 
   <ion-slides pager autoplay="3000" loop="true" speed="2000">
     <ion-slide *ngFor="let slide of slides">
@@ -37,72 +29,19 @@
     &nbsp;&nbsp;Home
   </button>
 
-  <ion-card>
-
-    <ion-card-header>
-      Daily tips
-    </ion-card-header>
-    <ion-card-content>
-      <div>
-        <ion-segment [(ngModel)]="segment">
-          <ion-segment-button value="food">
-            Food
-          </ion-segment-button>
-          <ion-segment-button value="technology">
-            Technology
-          </ion-segment-button>
-          <ion-segment-button value="travel">
-            Travel
-          </ion-segment-button>
-        </ion-segment>
-        <br />
-      </div>
-
-      <div [ngSwitch]="segment">
-        <ion-list *ngSwitchCase="'food'">
-          <h4>Ina's Mac and Cheese</h4>
-          <p>
-            Here's what one recipe reviewer had to say: "This mac and cheese is all grown-up. It was tasty, cheesy and easy to make.
-            Have made it a few times in the last 2 months and it is a hit each time."
-          </p>
-        </ion-list>
-
-        <ion-list *ngSwitchCase="'technology'">
-          <h4>Google Go</h4>
-          <p>
-            Google Go makes discovering, exploring, and sharing the best of the web easy and fast. Get answers quickly and reliably with
-            Google Go, even on slow connections and smartphones with low space. At 5MB in size, it’s speedy to download and
-            get started.
-          </p>
-        </ion-list>
-
-        <ion-list *ngSwitchCase="'travel'">
-          <h4>Take Lots Of Photos</h4>
-          <p>
-            You may only see these places & meet these people once in your lifetime. Remember them forever with plenty of photos. Don’t
-            worry about looking like a “tourist”. Are you traveling to look cool? No one cares. Great photos are the ultimate
-            souvenir.
-          </p>
-        </ion-list>
-      </div>
-    </ion-card-content>
-
-  </ion-card>
-  <ion-card *ngFor="let source of allSource">
-    <img [src]="source.image" />
-    <ion-card-content>
-      {{source.description}}
-    </ion-card-content>
-    <ion-item>
-      <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
-      Albums
-      <ion-badge item-end>9</ion-badge>
+  <ion-list>
+    <ion-item *ngFor="let source of allSource">
+      <h2>{{source.topic}}</h2>
+      <p>{{source.description}}</p>
+      <ion-thumbnail item-end>
+        <img [src]="source.image"/>
+      </ion-thumbnail>
+      <button><i class="far fa-heart"></i></button>
+      <button (click)="shareTips(source)"><i class="fas fa-share-alt"></i></button>
     </ion-item>
-
-    <ion-item>
-      <ion-icon name='logo-twitter' item-start style="color: #55acee"></ion-icon>
-      Followers
-      <ion-badge item-end>260k</ion-badge>
-    </ion-item>
-  </ion-card>
+  </ion-list>
+  <div class="middleText">
+    <p> Resource Term </p>
+    <hr/>
+  </div>
 </ion-content>

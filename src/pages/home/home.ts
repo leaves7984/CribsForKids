@@ -1,49 +1,85 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Content } from 'ionic-angular';
+import {NavController, ActionSheetController, LoadingController} from 'ionic-angular';
 import { SourceProvider} from "../../providers/source/source";
 import { Detail} from "../../detail";
-import { AboutPage } from "../about/about";
+import {SocialSharing} from "@ionic-native/social-sharing";
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  @ViewChild(Content) content: Content;
-
   allSource: Detail[];
-  segment: string = 'food';
+  public selected: boolean;
+
   slides = [
     {
       title: "Welcome to the Docs!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
       image: "../../assets/imgs/slide1.png",
     },
     {
       title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "../../assets/imgs/slide2.png",
+      image: "../../assets/imgs/slide2.jpg",
     },
     {
       title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "../../assets/imgs/slide3.png",
+      image: "../../assets/imgs/slide3.jpg",
     }
   ];
 
-  constructor(private provider: SourceProvider,public navCtrl: NavController) {
+  constructor(private provider: SourceProvider,
+              public navCtrl: NavController,
+              private socialSharing: SocialSharing,
+              private actionSheetController: ActionSheetController,
+              private loadingController: LoadingController) {
+    this.selected = true;
   }
 
-  goSafeSleep(){
-    this.navCtrl.push(AboutPage);
+  shareTips(source) {
+    let shareTipsActionSheet = this.actionSheetController.create({
+      title: "Share Tips with friends",
+      buttons: [
+        {
+          text: "Share On Facebook",
+          icon: "logo-facebook",
+          handler: () => {
+            this.socialSharing.shareViaFacebook(source.name, source.image, source.description);
+          }
+
+        },
+        {
+          text: "Share On Twitter",
+          icon: "logo-twitter",
+          handler: () => {
+            this.socialSharing.shareViaTwitter(source.name, source.image, source.description);
+          }
+        },
+        {
+          text: "Share",
+          icon: "share",
+          handler: () => {
+            this.socialSharing.share(source.name, source.image, source.description);
+          }
+        },
+        {
+          text: "Cancel",
+          role: "destructive"
+        }
+      ]
+    });
+    shareTipsActionSheet.present();
   }
 
   ionViewDidLoad(){
+    let allTipsLoadingController = this.loadingController.create({
+      content: "Getting Your Tips From Server"
+    });
+    allTipsLoadingController.present();
     this.provider.getSource()
-      .subscribe(data=>this.allSource = data);
-  }
-
-  scrollToTop() {
-    this.content.scrollToTop();
+      .subscribe(data => {
+        this.allSource = data;
+        allTipsLoadingController.dismiss();
+        console.log(data);
+      });
   }
 }

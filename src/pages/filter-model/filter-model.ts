@@ -14,10 +14,10 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'filter-model.html',
 })
 export class FilterModelPage {
-  public m0Selected = false;
-  public m4Selected = false;
-  public m6Selected = false;
-  public m9Selected = false;
+  public m0Selected = true;
+  public m4Selected = true;
+  public m6Selected = true;
+  public m9Selected = true;
 
   constructor(private viewController: ViewController,public navCtrl: NavController, public navParams: NavParams) {
   }

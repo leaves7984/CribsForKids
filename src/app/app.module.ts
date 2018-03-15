@@ -18,14 +18,15 @@ import { SafeSleepTipsPage } from "../pages/safe-sleep-tips/safe-sleep-tips";
 import { ReduceRiskPage } from "../pages/reduce-risk/reduce-risk";
 import { VideosPage } from "../pages/videos/videos";
 import { FilterModelPage } from "../pages/filter-model/filter-model";
-
+import {SocialSharing} from "@ionic-native/social-sharing";
 import { ExpandableComponent } from "../components/expandable/expandable"
 import { YoutubePipe } from '../pipes/youtube/youtube';
-
+import {ContactFormPage} from "../pages/contact-form/contact-form";
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @NgModule({
   declarations: [
+    ContactFormPage,
     FilterModelPage,
     SafeSleepPage,
     AskPediatricianPage,
@@ -48,6 +49,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    ContactFormPage,
     FilterModelPage,
     SafeSleepPage,
     AskPediatricianPage,
@@ -62,6 +64,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
     VideosPage
   ],
   providers: [
+    SocialSharing,
     SourceProvider,
     StatusBar,
     SplashScreen,
