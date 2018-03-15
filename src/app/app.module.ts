@@ -16,9 +16,11 @@ import { SafeSleepPage } from "../pages/safe-sleep/safe-sleep";
 import { AskPediatricianPage } from "../pages/ask-pediatrician/ask-pediatrician";
 import { SafeSleepTipsPage } from "../pages/safe-sleep-tips/safe-sleep-tips";
 import { ReduceRiskPage } from "../pages/reduce-risk/reduce-risk";
+import { VideosPage } from "../pages/videos/videos";
 import { FilterModelPage } from "../pages/filter-model/filter-model";
 
 import { ExpandableComponent } from "../components/expandable/expandable"
+import { YoutubePipe } from '../pipes/youtube/youtube';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ExpandableComponent } from "../components/expandable/expandable"
     HomePage,
     DonatePage,
     TabsPage,
-    ExpandableComponent
+    VideosPage,
+    ExpandableComponent,
+    YoutubePipe
   ],
   imports: [
     HttpClientModule,
@@ -52,7 +56,8 @@ import { ExpandableComponent } from "../components/expandable/expandable"
     ContactPage,
     HomePage,
     DonatePage,
-    TabsPage
+    TabsPage,
+    VideosPage
   ],
   providers: [
     SourceProvider,
