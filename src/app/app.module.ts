@@ -22,6 +22,8 @@ import { FilterModelPage } from "../pages/filter-model/filter-model";
 import { ExpandableComponent } from "../components/expandable/expandable"
 import { YoutubePipe } from '../pipes/youtube/youtube';
 
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 @NgModule({
   declarations: [
     FilterModelPage,
@@ -63,6 +65,7 @@ import { YoutubePipe } from '../pipes/youtube/youtube';
     SourceProvider,
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
 
   ],

@@ -11,7 +11,8 @@
   <div class="flex-panel" padding-left padding-right>
     <div class="contact-tile pink-tile">
       <span>
-        <p>Newsletter Sign Up<br>
+        <p>Newsletter Sign Up
+          <br>
         </p>
       </span>
     </div>
@@ -19,13 +20,14 @@
   <div class="flex-panel" padding>
     <div class="contact-tile green-tile">
       <span>
-        <p>Social Media<br>
-          <ion-icon class= "social-media" name="logo-facebook" item-start></ion-icon>
-          <ion-icon class= "social-media" name="logo-twitter"></ion-icon>
-          <ion-icon class= "social-media" name="logo-instagram"></ion-icon>
-          <ion-icon class= "social-media" name="logo-youtube"></ion-icon>
-          <ion-icon class= "social-media" name="logo-pinterest"></ion-icon>
-          <ion-icon class= "social-media" name="logo-linkedin"></ion-icon>
+        <p>Social Media
+          <br>
+          <ion-icon (click)="OpenSocialMedia('https://www.facebook.com/CribsforKidsHeadquarters/')" class="social-media" name="logo-facebook" item-start></ion-icon>
+          <ion-icon (click)="OpenSocialMedia('https://twitter.com/CribsForKids?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor')" class="social-media" name="logo-twitter"></ion-icon>
+          <ion-icon (click)="OpenSocialMedia('https://www.instagram.com/explore/locations/850466335/cribs-for-kids-national-infant-safe-sleep-initiative/')" class="social-media" name="logo-instagram"></ion-icon>
+          <ion-icon (click)="OpenSocialMedia('https://www.youtube.com/channel/UCBum8iqvzCdtAja8q-DIPuA')" class="social-media" name="logo-youtube"></ion-icon>
+          <ion-icon (click)="OpenSocialMedia('https://www.pinterest.com/cribsforkids/pins/')" class="social-media" name="logo-pinterest"></ion-icon>
+          <ion-icon (click)="OpenSocialMedia('https://www.linkedin.com/company/cribs-for-kids-headquarters/')" class="social-media" name="logo-linkedin"></ion-icon>
         </p>
       </span>
     </div>
