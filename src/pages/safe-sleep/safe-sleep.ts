@@ -30,37 +30,37 @@ export class SafeSleepPage {
 
   openFilterModal(){
     let openFilterModal = this.modalController.create(FilterModelPage);
-    openFilterModal.onDidDismiss((filterState)=>{
-      this.m0Selected = filterState.m0Selected,
-        this.m4Selected = filterState.m4Selected,
-        this.m6Selected = filterState.m6Selected,
-        this.m9Selected = filterState.m9Selected,
+    openFilterModal.onDidDismiss((filterAge) => {
+      this.m0Selected = filterAge.m0Selected,
+        this.m4Selected = filterAge.m4Selected,
+        this.m6Selected = filterAge.m6Selected,
+        this.m9Selected = filterAge.m9Selected,
 
         this.provider.getSource()
           .subscribe((allSource) => {
 
             let sources = allSource;
             let tmp = sources;
-            if (!filterState.m0Selected) {
+            if (!filterAge.m0Selected) {
               tmp = sources.filter((item) => {
                 return item.age !== "0-3"
               });
               sources = tmp;
             }
-            if (!filterState.m4Selected) {
+            if (!filterAge.m4Selected) {
               tmp = sources.filter((item) => {
                 return item.age !== "4-6"
               });
               sources = tmp;
 
             }
-            if (!filterState.m6Selected) {
+            if (!filterAge.m6Selected) {
               tmp = sources.filter((item) => {
                 return item.age !== "6-8"
               });
               sources = tmp;
             }
-            if (!filterState.m9Selected) {
+            if (!filterAge.m9Selected) {
               tmp = sources.filter((item) => {
                 return item.age !== "9-12";
               });
@@ -70,7 +70,7 @@ export class SafeSleepPage {
             this.allSource = sources;
 
           }),
-        console.log(filterState)
+        console.log(filterAge)
     });
     openFilterModal.present();
 

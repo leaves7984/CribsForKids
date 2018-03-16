@@ -6,28 +6,43 @@
 
 
 <ion-content>
+  <!--Cribs for kids icon-->
+  <!--
   <br />
   <img src="../../assets/imgs/title.png" class="title" />
   <hr />
+  -->
 
-  <div class="middleText">
-    <p> Good Morning </p>
+
+  <div class="wrapper">
+    <div class="sliding-background">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="content">
+            <h1>Cribs for Kids®</h1>
+            <h3>Helping Every Baby Sleep Safer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <ion-slides pager autoplay="3000" loop="true" speed="2000">
+
+  <!--ion-slides-->
+  <!--
+    <ion-slides pager autoplay="3000" loop="true" speed="2000">
     <ion-slide *ngFor="let slide of slides">
       <img [src]="slide.image" class="slide-image" />
     </ion-slide>
   </ion-slides>
+  -->
+
   <div class="middleText">
     <p> OUR ACADEMY </p>
     <hr />
   </div>
 
-  <button ion-button clear (click)="scrollToTop()">
-    <ion-icon name="home"></ion-icon>
-    &nbsp;&nbsp;Home
-  </button>
+
 
   <ion-list>
     <ion-item *ngFor="let source of allSource">
@@ -44,4 +59,78 @@
     <p> Resource Term </p>
     <hr/>
   </div>
+  <div class="middleText">
+    <p> Sign Up For Our Newsletter </p>
+    <hr/>
+  </div>
+  <p id="newsLetter">Sign up to get promotions, news and more!</p>
+  <div>
+    <form action="" method="post">
+      <div class="">
+        <input type="email" name="EMAIL" placeholder="email address">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+  <ul class="list-inline">
+    <li>
+      <a href="https://www.facebook.com/CribsforKidsHeadquarters/" target="_blank">
+        <svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><title>Like Cribs For kids on
+          Facebook</title>
+          <g fill="#6A757D">
+            <path
+              d="M13.5 24.3c-6 0-10.8-4.8-10.8-10.8 0-6 4.9-10.8 10.8-10.8 6 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8m0-23.8C6.3.5.5 6.3.5 13.5s5.8 13 13 13 13-5.8 13-13-5.8-13-13-13"></path>
+            <path
+              d="M15.7 9.9c-.4 0-.7.4-.7 1v2h3.6v3H15v8.8h-3.4v-8.8h-3v-3h3v-1.7c0-2.5 1.8-4.5 4.1-4.5h2.8v3.1h-2.8z"></path>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/cribsforkids" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" width="27" height="27"><title>Follow @Cribs For kids
+          on Twitter</title>
+          <g fill="#6A757D">
+            <path
+              d="M13.5 24.3c-6 0-10.8-4.8-10.8-10.8 0-6 4.9-10.8 10.8-10.8 6 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8m0-23.8C6.3.5.5 6.3.5 13.5s5.8 13 13 13 13-5.8 13-13-5.8-13-13-13"></path>
+            <path fill="#6A757D"
+                  d="M20 11.3v.4c0 3.9-3 8.5-8.5 8.5-1.7 0-3.2-.5-4.6-1.3h.7c1.4 0 2.7-.5 3.7-1.3-1.3 0-2.4-.9-2.8-2.1.2.1.3.1.5.1.3 0 .5 0 .8-.1-1.4-.3-2.4-1.5-2.4-2.9.4.2.9.3 1.3.4-.8-.5-1.3-1.5-1.3-2.5 0-.5.2-1 .4-1.5 1.5 1.8 3.7 3 6.1 3.1-.1-.2-.1-.4-.1-.7 0-1.6 1.3-3 3-3 .9 0 1.6.3 2.1.9.7-.1 1.3-.4 1.9-.7-.2.7-.7 1.3-1.3 1.6.6-.1 1.2-.3 1.7-.5-.1.7-.6 1.2-1.2 1.6z"></path>
+          </g>
+        </svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/cribsforkids/" target="_blank">
+        <svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><title>Follow @Cribs For kids
+          on Instagram</title>
+          <g fill="#6A747C">
+            <path
+              d="M13.5 24.3c-6 0-10.8-4.8-10.8-10.8 0-6 4.9-10.8 10.8-10.8 6 0 10.8 4.8 10.8 10.8 0 6-4.8 10.8-10.8 10.8m0-23.8C6.3.5.5 6.3.5 13.5s5.8 13 13 13 13-5.8 13-13-5.8-13-13-13"
+              id="Shape"></path>
+            <path
+              d="M20.1 8.9v2.2h-3.4c-.7-1-1.9-1.7-3.3-1.7s-2.6.6-3.3 1.7H6.9V8.9c0-1.1.9-2.1 2.1-2.1h9.1c1.1.1 2 1 2 2.1zm-2.7 3.8h2.7V18c0 1.1-.9 2.1-2.1 2.1H8.9c-1.1 0-2.1-1-2.1-2.1v-5.3h2.7c0 .2-.1.5-.1.8 0 2.2 1.8 4 4 4s4-1.8 4-4c.1-.3.1-.5 0-.8zM13.5 16c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zM19 8.3c0-.2-.1-.3-.3-.3h-1.1c-.2 0-.4.2-.4.4v1.1c0 .2.2.4.4.4h1.1c.2 0 .4-.2.4-.4V8.3H19z"></path>
+          </g>
+        </svg>
+
+      </a>
+    </li>
+    <li>
+      <a href="https://www.pinterest.com/cribsfokids/pins/" target="_blank">
+        <svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><title>Follow @Cribs For kids
+          on Pinterest</title>
+          <g fill="#6A757D">
+            <path
+              d="M13.5 24.3c-6 0-10.8-4.8-10.8-10.8 0-6 4.9-10.8 10.8-10.8 6 0 10.8 4.8 10.8 10.8s-4.8 10.8-10.8 10.8m0-23.8C6.3.5.5 6.3.5 13.5s5.8 13 13 13 13-5.8 13-13-5.8-13-13-13"></path>
+            <path
+              d="M13.9 6c-4.6 0-7 3.3-7 6.1 0 1.7.6 3.2 2 3.7.2.1.4 0 .5-.2 0-.2.2-.6.2-.8.1-.2 0-.3-.1-.5-.4-.5-.6-1.1-.6-1.9 0-2.5 1.8-4.7 4.8-4.7 2.6 0 4.1 1.6 4.1 3.7 0 2.8-1.2 5.2-3.1 5.2-1 0-1.8-.8-1.5-1.9.3-1.2.9-2.6.9-3.5 0-.8-.4-1.5-1.3-1.5-1 0-1.9 1.1-1.9 2.5 0 .9.3 1.5.3 1.5s-1.1 4.5-1.3 5.3c-.4 1.6-.1 3.5 0 3.7 0 .1.2.1.2.1.1-.1 1.3-1.7 1.8-3.2.1-.4.7-2.7.7-2.7.3.6 1.3 1.2 2.4 1.2 3.1 0 5.3-2.9 5.3-6.7-.2-2.7-2.7-5.4-6.4-5.4zm0 0"></path>
+          </g>
+        </svg>
+      </a>
+    </li>
+  </ul>
+
+  <button ion-button clear (click)="scrollToTop()">
+    <ion-icon name="home"></ion-icon>
+    &nbsp;&nbsp;Home
+  </button>
 </ion-content>

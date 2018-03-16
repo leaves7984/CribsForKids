@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {NavController, ActionSheetController, LoadingController} from 'ionic-angular';
+import {NavController, Content, ActionSheetController, LoadingController} from 'ionic-angular';
 import { SourceProvider} from "../../providers/source/source";
 import { Detail} from "../../detail";
 import {SocialSharing} from "@ionic-native/social-sharing";
@@ -9,6 +9,8 @@ import {SocialSharing} from "@ionic-native/social-sharing";
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  @ViewChild(Content) content: Content;
   allSource: Detail[];
   public selected: boolean;
 
@@ -81,5 +83,9 @@ export class HomePage {
         allTipsLoadingController.dismiss();
         console.log(data);
       });
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop();
   }
 }

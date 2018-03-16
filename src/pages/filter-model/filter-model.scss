@@ -2,14 +2,15 @@ body,html {
   text-align: center;
   //font-family: 'Arial', sans-serif;
 }
-ion-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
+
+//ion-title {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  text-align: center;
+//}
 /*
 .title{
   max-height: 50%;
@@ -51,7 +52,7 @@ ion-title {
 }
 
 .green-tile {
-  background: #00afaa !important; 
+  background: #00afaa !important;
   color: white !important;
 }
 
@@ -63,4 +64,9 @@ ion-title {
 .blank-title {
   color: black;
   background: #f8f8f8;
+}
+
+#category {
+
+  padding-top: 70px;
 }

@@ -1,6 +1,14 @@
+ion-content {
+  font-family: "Graphik", sans-serif;
+}
 .middleText {
   text-align: center; //font-family: 'Arial', sans-serif;
   color: #01337a;
+  text-transform: uppercase;
+  font-family: 'Rammetto One', cursive;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-top: 10px;
 }
 
 ion-slides {
@@ -18,3 +26,83 @@ ion-slides {
 .content-ios hr {
   height: 1px;
 }
+
+.list-inline {
+  padding-left: 0;
+  padding-top: 10px;
+  list-style-type: none;
+  margin-left: -5px;
+
+}
+
+ul li {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*text shadow*/
+#content {
+  text-align: center;
+  padding-top: 35%;
+  padding-bottom: 10%;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+  0px 8px 13px rgba(0, 0, 0, 0.1),
+  0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+/*hr shadow*/
+div hr {
+  border-top: #f8f8f8 1px solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 75px;
+}
+
+.sliding-background {
+  background-size: cover;
+  background-position: center;
+  font-family: Lato;
+  color: white;
+  -webkit-animation: slide 30s infinite;
+
+}
+
+@-webkit-keyframes slide {
+  0% {
+    background-image: url("../../assets/imgs/homeSlide/slide1.png");
+  }
+  50% {
+    background-image: url("../../assets/imgs/homeSlide/slide2.jpg");
+  }
+  100% {
+    background-image: url("../../assets/imgs/homeSlide/slide3.jpg");
+  }
+}
+
+input[type = email] {
+  margin-left: 35px;
+  width: 65%;
+}
+
+#newsLetter {
+  font-weight: normal;
+}
+
+ion-thumbnail img {
+
+  border-radius: 50%;
+  border: none;
+}
+
+button:focus {
+  border: none;
+  background: none;
+  outline-style: none;
+  transition: all 0.3s;
+}
+
+//button:hover {
+//  border: steelblue 1px solid;
+//}

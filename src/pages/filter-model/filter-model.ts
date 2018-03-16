@@ -18,6 +18,8 @@ export class FilterModelPage {
   public m4Selected = true;
   public m6Selected = true;
   public m9Selected = true;
+  public ageExpand = true;
+  public topicExpand = false;
 
   constructor(private viewController: ViewController,public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -26,14 +28,23 @@ export class FilterModelPage {
     console.log('ionViewDidLoad FilterModelPage');
   }
   closeModal(){
-    let filterState = {
+    let filterAge = {
       m0Selected: this.m0Selected,
       m4Selected: this.m4Selected,
       m6Selected: this.m6Selected,
       m9Selected: this.m9Selected
     }
-    this.viewController.dismiss(filterState);
+    this.viewController.dismiss(filterAge);
     //this.navCtrl.pop();
   }
 
+  expandAge() {
+    this.ageExpand = !this.ageExpand;
+    this.topicExpand = this.ageExpand;
+  }
+
+  expandTopic() {
+    this.ageExpand = this.topicExpand;
+    this.topicExpand = !this.topicExpand;
+  }
 }
