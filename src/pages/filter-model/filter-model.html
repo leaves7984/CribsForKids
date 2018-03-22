@@ -19,53 +19,55 @@
 
 <ion-content padding>
   <div>
-    <div>
-      <button ion-button full (click)="expandAge()" clear>By Age Group</button>
-      <expandable [expanded]="ageExpand">
-        <ion-row>
-          <ion-col>
-            <div class="flex-panel">
-              <div class="menu-tile blank-title" [ngClass]="{'gray-tile' : m0Selected}"
-                   (click)="m0Selected=!m0Selected">
-                <span><p>0-3 Months</p></span>
+    <div ng-app="ngToggle">
+      <div ng-controller="expandCtrl">
+        <button ion-button full ng-click="custom =!custom" clear>By Age Group</button>
+        <div ng-hide="custom">
+          <ion-row>
+            <ion-col>
+              <div class="flex-panel">
+                <div class="menu-tile blank-title" [ngClass]="{'gray-tile' : m0Selected}"
+                     (click)="m0Selected=!m0Selected">
+                  <span><p>0-3 Months</p></span>
+                </div>
+                <div class="menu-tile blank-title" [ngClass]="{'pink-tile' : m4Selected}"
+                     (click)="m4Selected=!m4Selected">
+                  <span><p>4-6 Months</p></span>
+                </div>
               </div>
-              <div class="menu-tile blank-title" [ngClass]="{'pink-tile' : m4Selected}"
-                   (click)="m4Selected=!m4Selected">
-                <span><p>4-6 Months</p></span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="flex-panel">
+                <div class="menu-tile blank-title" [ngClass]="{'green-tile' : m6Selected}"
+                     (click)="m6Selected=!m6Selected">
+                  <span><p>6-8 Months</p></span>
+                </div>
+                <div class="menu-tile blank-title" [ngClass]="{'blue-tile' : m9Selected}"
+                     (click)="m9Selected=!m9Selected">
+                  <span><p>9-12 Months</p></span>
+                </div>
               </div>
-            </div>
-          </ion-col>
-        </ion-row>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+
+    <div id="category">
+      <button ion-button full (click)="expandTopic()" clear>By Topic</button>
 
         <ion-row>
           <ion-col>
             <div class="flex-panel">
-              <div class="menu-tile blank-title" [ngClass]="{'green-tile' : m6Selected}"
-                   (click)="m6Selected=!m6Selected">
-          <span>
-            <p>6-8 Months</p>
-          </span>
-              </div>
-              <div class="menu-tile blank-title" [ngClass]="{'blue-tile' : m9Selected}"
-                   (click)="m9Selected=!m9Selected">
-                <span><p>9-12 Months</p></span>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
-      </expandable>
-    </div>
-    <div id="category">
-      <button ion-button full (click)="expandTopic()" clear>By Topic</button>
-      <expandable [expanded]="topicExpand">
-        <ion-row>
-          <ion-col>
-            <div class="flex-panel">
-              <div class="menu-tile gray-tile" [ngClass]="{'gray-tile' : m0Selected}" (click)="m0Selected=!m0Selected">
+              <div class="menu-tile gray-tile" [ngClass]="{'gray-tile' : tummySelected}"
+                   (click)="tummySelected=!tummySelected">
                 <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
                 <span><p>Tummy</p></span>
               </div>
-              <div class="menu-tile pink-tile" [ngClass]="{'pink-tile' : m4Selected}" (click)="m4Selected=!m4Selected">
+              <div class="menu-tile pink-tile" [ngClass]="{'pink-tile' : legSelected}"
+                   (click)="legSelected=!legSelected">
                 <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
                 <span><p>Leg Exercises</p></span>
               </div>
@@ -76,19 +78,20 @@
         <ion-row>
           <ion-col>
             <div class="flex-panel">
-              <div class="menu-tile green-tile" [ngClass]="{'green-tile' : m6Selected}"
-                   (click)="m6Selected=!m6Selected">
+              <div class="menu-tile green-tile"
+                   [ngClass]="{'green-tile' :strengthSelected}" (click)="strengthSelected=!strengthSelected">
+
                 <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
                 <span><p>Leg Strengthening</p></span>
               </div>
-              <div class="menu-tile blue-tile" [ngClass]="{'blue-tile' : m9Selected}" (click)="m9Selected=!m9Selected">
+              <div class="menu-tile blue-tile" [ngClass]="{'blue-tile' : motorSelected}"
+                   (click)="motorSelectedion=!motorSelectedion">
                 <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
                 <span><p>Fine&Gross Motor Skills</p></span>
               </div>
             </div>
           </ion-col>
         </ion-row>
-      </expandable>
     </div>
   </div>
 

@@ -21,6 +21,11 @@ export class FilterModelPage {
   public ageExpand = true;
   public topicExpand = false;
 
+  public tummySelected = true;
+  public legSelected = true;
+  public strengthSelected = true;
+  public motorSelected = true;
+
   constructor(private viewController: ViewController,public navCtrl: NavController, public navParams: NavParams) {
   }
 

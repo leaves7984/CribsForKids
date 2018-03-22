@@ -15,6 +15,26 @@ body,html {
 }*/
 .flex-panel {
   display: flex;
+  flex-direction: column;
+  //background-image: url("../../assets/imgs/bk1.jpg");
+  background-size: cover;
+}
+
+.flex-panel div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 50%;
+  opacity: 0.7;
+  min-height: 9.6rem;
+  max-height: 9.6rem;
+  transition: all 0.3s ease-in;
+}
+
+/*
+.flex-panel {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -37,6 +57,8 @@ body,html {
   box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22) !important;
   transform: translateY(4px);
 }
+
+*/
 .gray-tile {
   background: #77767b;
 }
