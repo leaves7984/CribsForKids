@@ -9,31 +9,74 @@
   <ion-navbar>
     <ion-title>Infant Safe Sleep</ion-title>
   </ion-navbar>
+  <div>
+    <ion-segment [(ngModel)]="categories">
+      <ion-segment-button value="academy">
+        Academy
+      </ion-segment-button>
+      <ion-segment-button value="tips">
+        Tips
+      </ion-segment-button>
+      <ion-segment-button value="videos">
+        Videos
+      </ion-segment-button>
 
+    </ion-segment>
+  </div>
 </ion-header>
 
 
 
 <ion-content class="card-background-page">
+  <!--
   <img src="./assets/imgs/slide1.png" />
   <div>
     <p><span>Safe Sleeping</span></p>
   </div>
-
-  <ion-card *ngFor="let source of allSource">
-    <ion-list>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img [src]="source.image"/>
-        </ion-thumbnail>
-        <h2>{{source.topic}}</h2>
-        <p>{{source.description}}</p>
-      </ion-item>
+  -->
+  <div [ngSwitch]="categories">
+    <ion-list *ngSwitchCase="'academy'">
+      <ion-card *ngFor="let source of allSource">
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img [src]="source.image"/>
+            </ion-thumbnail>
+            <h2>{{source.topic}}</h2>
+            <p>{{source.description}}</p>
+          </ion-item>
+        </ion-list>
+      </ion-card>
+      <ion-fab right bottom>
+        <button (click)="openFilterModal()">
+          <i class="fas fa-cog fa-2x"></i>
+        </button>
+      </ion-fab>
     </ion-list>
-  </ion-card>
-  <ion-fab right bottom>
-    <button (click)="openFilterModal()">
-      <i class="fas fa-cog fa-2x"></i>
-    </button>
-  </ion-fab>
+
+    <ion-list *ngSwitchCase="'tips'">
+      <ion-list>
+        <div ion-item *ngFor="let item of items">
+          <expandable [title]="item.title" [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+            {{item.content}}
+          </expandable>
+          <button ion-button class='right-top' (click)="expandItem(item)" clear item-end>View</button>
+        </div>
+      </ion-list>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'videos'">
+      <ion-card *ngFor="let video of videos">
+        <ion-card-header>
+          {{video.title}}
+        </ion-card-header>
+        <ion-card-content>
+          <iframe width="100%" height="auto" [src]="video.video | sanitizer" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+
+
 </ion-content>

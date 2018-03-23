@@ -14,10 +14,13 @@ import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angul
   templateUrl: 'filter-model.html',
 })
 export class FilterModelPage {
+  selectAge = true;
+
   public m0Selected = true;
   public m4Selected = true;
   public m6Selected = true;
   public m9Selected = true;
+
   public ageExpand = true;
   public topicExpand = false;
 
@@ -37,19 +40,28 @@ export class FilterModelPage {
       m0Selected: this.m0Selected,
       m4Selected: this.m4Selected,
       m6Selected: this.m6Selected,
-      m9Selected: this.m9Selected
+      m9Selected: this.m9Selected,
+      tummySelected: this.tummySelected,
+      legSelected: this.legSelected,
+      strengthSelected: this.strengthSelected,
+      motorSelected: this.motorSelected,
+      selectAge: this.selectAge
     }
     this.viewController.dismiss(filterAge);
     //this.navCtrl.pop();
   }
 
   expandAge() {
-    this.ageExpand = !this.ageExpand;
-    this.topicExpand = this.ageExpand;
+    this.ageExpand = true;
+    this.topicExpand = false;
+    this.selectAge = true;
+
   }
 
   expandTopic() {
-    this.ageExpand = this.topicExpand;
-    this.topicExpand = !this.topicExpand;
+    this.ageExpand = false;
+    this.topicExpand = true;
+    this.selectAge = false;
   }
+
 }

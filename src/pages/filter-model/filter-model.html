@@ -19,10 +19,9 @@
 
 <ion-content padding>
   <div>
-    <div ng-app="ngToggle">
-      <div ng-controller="expandCtrl">
-        <button ion-button full ng-click="custom =!custom" clear>By Age Group</button>
-        <div ng-hide="custom">
+    <button ion-button color="dark" icon-start (click)="expandAge()">By Age Group</button>
+    <button ion-button color="dark" icon-end (click)="expandTopic()">By Topic</button>
+    <div *ngIf="ageExpand">
           <ion-row>
             <ion-col>
               <div class="flex-panel">
@@ -52,48 +51,48 @@
             </ion-col>
           </ion-row>
         </div>
-      </div>
+    <div *ngIf="topicExpand">
+      <ion-row>
+        <ion-col>
+          <div class="flex-panel">
+            <div class="menu-tile gray-tile" [ngClass]="{'gray-tile' : tummySelected}"
+                 (click)="tummySelected=!tummySelected">
+              <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
+              <span><p>Tummy</p></span>
+            </div>
+            <div class="menu-tile pink-tile" [ngClass]="{'pink-tile' : legSelected}"
+                 (click)="legSelected=!legSelected">
+              <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
+              <span><p>Leg Exercises</p></span>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <div class="flex-panel">
+            <div class="menu-tile green-tile"
+                 [ngClass]="{'green-tile' :strengthSelected}" (click)="strengthSelected=!strengthSelected">
+
+              <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
+              <span><p>Leg Strengthening</p></span>
+            </div>
+            <div class="menu-tile blue-tile" [ngClass]="{'blue-tile' : motorSelected}"
+                 (click)="motorSelectedion=!motorSelectedion">
+              <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
+              <span><p>Fine&Gross Motor Skills</p></span>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
     </div>
 
-    <div id="category">
-      <button ion-button full (click)="expandTopic()" clear>By Topic</button>
+  <div>
 
-        <ion-row>
-          <ion-col>
-            <div class="flex-panel">
-              <div class="menu-tile gray-tile" [ngClass]="{'gray-tile' : tummySelected}"
-                   (click)="tummySelected=!tummySelected">
-                <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
-                <span><p>Tummy</p></span>
-              </div>
-              <div class="menu-tile pink-tile" [ngClass]="{'pink-tile' : legSelected}"
-                   (click)="legSelected=!legSelected">
-                <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
-                <span><p>Leg Exercises</p></span>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <div class="flex-panel">
-              <div class="menu-tile green-tile"
-                   [ngClass]="{'green-tile' :strengthSelected}" (click)="strengthSelected=!strengthSelected">
-
-                <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
-                <span><p>Leg Strengthening</p></span>
-              </div>
-              <div class="menu-tile blue-tile" [ngClass]="{'blue-tile' : motorSelected}"
-                   (click)="motorSelectedion=!motorSelectedion">
-                <!--<ion-checkbox color="black" checked="false"></ion-checkbox>-->
-                <span><p>Fine&Gross Motor Skills</p></span>
-              </div>
-            </div>
-          </ion-col>
-        </ion-row>
     </div>
-  </div>
 
 
 </ion-content>

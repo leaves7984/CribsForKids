@@ -13,23 +13,27 @@ body,html {
   max-width: 60%;
   margin: 18px 60px;
 }*/
-.flex-panel {
+.flex-panel-about {
   display: flex;
-  flex-direction: column;
-  //background-image: url("../../assets/imgs/bk1.jpg");
+  flex-direction: row;
   background-size: cover;
+  height: 25%;
 }
 
-.flex-panel div {
+.flex-panel-about div {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   width: 50%;
+  height: 100%;
   opacity: 0.7;
-  min-height: 9.6rem;
-  max-height: 9.6rem;
   transition: all 0.3s ease-in;
+}
+
+.flex-panel-about span {
+  font-weight: bold;
+  color: white;
+
 }
 
 /*
