@@ -23,9 +23,11 @@ import { ExpandableComponent } from "../components/expandable/expandable"
 import { YoutubePipe } from '../pipes/youtube/youtube';
 import {ContactFormPage} from "../pages/contact-form/contact-form";
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import {WelcomePage} from "../pages/welcome/welcome";
 
 @NgModule({
   declarations: [
+    WelcomePage,
     ContactFormPage,
     FilterModelPage,
     SafeSleepPage,
@@ -49,6 +51,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    WelcomePage,
     ContactFormPage,
     FilterModelPage,
     SafeSleepPage,

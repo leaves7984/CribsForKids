@@ -1,0 +1,30 @@
+page-welcome {
+  #welcome {
+    //background: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+    //background-size: contain;
+
+  }
+  #main-container {
+    padding-top: 20%;
+    height: 85%;
+
+  }
+  #main-container div {
+    margin-top: 40px;
+    margin-left: 35%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
+
+  }
+  #footer {
+
+  }
+  #main-container button {
+    color: #01337a;
+    font-family: 'Rammetto One', cursive;
+    font-size: 1.2em;
+    font-weight: 200;
+  }
+
+}
