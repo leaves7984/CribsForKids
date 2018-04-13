@@ -1,75 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Safe Sleep Academy
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <div style="height: 100%;">
+
+      <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk1.jpg');">
+        <div class="pink-tile" (click)="goInfantSafe()"><span><p>Safe Sleep</p></span></div>
+        <div></div>
+      </div>
+      <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk2.jpg');">
+        <div></div>
+        <div class="green-tile" (click)="goInfantSleepTips()"><span><p>Infant Sleep Tips</p></span></div>
+      </div>
+    <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk3.jpg');">
+      <div class="blue-tile" (click)="goBabyCare()"><span><p>Baby Care</p></span></div>
+      <div></div>
+    </div>
     <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk4.jpg');">
       <div></div>
-      <div class="gray-tile" (click)="goInfantSafe()"><span><p>Infant Safe Sleep</p></span></div>
+      <div class="gray-tile" (click)="goDevelopment()"><span><p>Development</p></span></div>
     </div>
-    <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk1.jpg');">
-      <div class="pink-tile" (click)="goReduceRisk()"><span><p>Safe & Healthy Home</p></span></div>
-      <div></div>
-    </div>
-    <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk2.jpg');">
-      <div></div>
-      <div class="green-tile" (click)="goVideos()"><span><p>Fun Development<br>Activities</p></span></div>
-    </div>
-    <div class="flex-panel-about" style="background-image: url('../../assets/imgs/bk3.jpg');">
-      <div class="blue-tile" (click)="goAskPediatrician()"><span><p>Ask the Pediatrician</p></span></div>
-      <div></div>
-    </div>
-  </div>
 
-
-  <!--<br />-->
-  <!--<img src="../../assets/imgs/title.png" class = "title"/>-->
-  <!--
-    <ion-row>
-    <ion-col>
-      <div class="flex-panel">
-        <div class="menu-tile gray-tile" (click)="goInfantSafe()"> <span><p>Infant Safe Sleep</p></span></div>
-        <div class="menu-tile gray-tile" (click)="goInfantSleepTips()"> <span><p>Infant Sleep Tips</p></span></div>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col>
-      <div class="flex-panel">
-        <div class="menu-tile pink-tile" (click)="goReduceRisk()"> <span><p>How to Reduce Your Risk</p></span></div>
-        <div class="menu-tile pink-tile"> <span><p>Safe & Healthy Home</p></span></div>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col>
-      <div class="flex-panel">
-        <div class="menu-tile green-tile"> <span><p>Milestones</p></span></div>
-        <div class="menu-tile green-tile"> <span><p>Fun Development Activities</p></span></div>
-      </div>
-    </ion-col>
-  </ion-row>
-
-  <ion-row>
-    <ion-col>
-      <div class="flex-panel">
-        <div class="menu-tile blue-tile" (click)="goVideos()"> <span><p>Video Library</p></span></div>
-        <div class="menu-tile blue-tile" (click)="goAskPediatrician()"> <span><p>Ask the Pediatrician</p></span></div>
-      </div>
-    </ion-col>
-  </ion-row>
-
-
-  -->
-
-
-
+</div>
 
 </ion-content>

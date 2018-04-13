@@ -6,7 +6,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { DonatePage } from '../pages/donate/donate';
+import { ResourcesPage } from '../pages/resources/resources';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpClientModule } from "@angular/common/http";
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +24,10 @@ import { YoutubePipe } from '../pipes/youtube/youtube';
 import {ContactFormPage} from "../pages/contact-form/contact-form";
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import {WelcomePage} from "../pages/welcome/welcome";
+import {DonatePage} from "../pages/donate/donate";
+import {AboutUsPage} from "../pages/about-us/about-us";
+import {BabyCarePage} from "../pages/baby-care/baby-care";
+import {DevelopmentPage} from "../pages/development/development";
 
 @NgModule({
   declarations: [
@@ -38,11 +42,15 @@ import {WelcomePage} from "../pages/welcome/welcome";
     AboutPage,
     ContactPage,
     HomePage,
-    DonatePage,
+    ResourcesPage,
     TabsPage,
     VideosPage,
     ExpandableComponent,
-    YoutubePipe
+    YoutubePipe,
+    DonatePage,
+    AboutUsPage,
+    BabyCarePage,
+    DevelopmentPage
   ],
   imports: [
     HttpClientModule,
@@ -62,9 +70,13 @@ import {WelcomePage} from "../pages/welcome/welcome";
     AboutPage,
     ContactPage,
     HomePage,
-    DonatePage,
+    ResourcesPage,
     TabsPage,
-    VideosPage
+    VideosPage,
+    DonatePage,
+    AboutUsPage,
+    BabyCarePage,
+    DevelopmentPage
   ],
   providers: [
     SocialSharing,
